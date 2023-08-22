@@ -64,11 +64,11 @@ int main(){
 	std::cout << "Radar: " << (radarEnabled ? "ON" : "OFF") << std::endl;
 	while (true)
 	{
-		//slow down because it is alot happening for the aul esp
+		//slow down because it is alot happening for the aul pc
 		std::this_thread::sleep_for(std::chrono::milliseconds(1));
 
 		// radar toggle key (Delete key)
-		if (GetAsyncKeyState(VK_DELETE) & 0x8000)  // Check if the Delete key is pressed
+		if (GetAsyncKeyState(VK_DELETE) & 0x8000) 
 		{
 			if (!toggleKeyPressed)
 			{
@@ -150,13 +150,13 @@ int main(){
 		
 
 	}
-	//clean up close your handles boys 
+	//clean up, close your handles boys 
 	CloseHandle(hSerial);
 	return 0;	
 }
 
 
-//map Funtion to put it on a 320 * 240 display
+//map Funtion to put it on a 320 * 240 display and then the odd crop i got on the map
 int map(int value, int inMin, int inMax, int outMin, int outMax) {
 	return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
