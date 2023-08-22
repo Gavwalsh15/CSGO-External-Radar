@@ -1,7 +1,7 @@
 CSGO-External-Radar
 Puts CSGO Radar on a TFT display and reveals enemys locations 
 
-This only works for DUST 2 as that is the map that is flashed to the ESP. 
+This works for DUST 2 only. 
 The Red dots are the Enemys and the Green one is the player.
 
 
