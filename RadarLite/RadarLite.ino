@@ -48,10 +48,10 @@ void loop() {
 
       String segment = data.substring(startIndex, endIndex);
       startIndex = endIndex + 1;
-      // Parse and process the received data
+      // Parse string
       if (segment.startsWith("L")) {//L for local player 
-        // Parse local player data (data format: "L,x,y")
-        data.remove(0, 2);  // Remove "L," prefix
+        // Parse local player data in the  format - L,x,y
+        data.remove(0, 2); //remove L
         int commaIndex = data.indexOf(',');
 
         clearPlayer(localPlayerX, localPlayerY);
